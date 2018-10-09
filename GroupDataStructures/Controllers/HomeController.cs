@@ -13,6 +13,7 @@ namespace GroupDataStructures.Controllers
         //another random testterr i love you all
         public ActionResult Index()
         {
+
             return View();
         }
     }
