@@ -30,7 +30,7 @@ namespace GroupDataStructures.Controllers
             for (var i = 0; i < 2000; i++)
                 {
                     numbers.Enqueue(i);
-                    ViewBag.MyList = numbers;
+                    ViewBag.MyList += ViewBag.MyList + i;
                 }
             return View("Index");
 

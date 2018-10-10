@@ -17,10 +17,7 @@
         </li>
         <li><a href="@Url.Action("addQueueList", "Queue")" class="w3-bar-item w3-button">Add Huge List of Items to the Queue</a>
             <div>
-                @foreach (var sData in ViewBag.MyQueue)
-                {
-                    <p>@sData</p>
-                }
+
             </div>
         </li>
         <li><a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Display the Queue</a></li>
