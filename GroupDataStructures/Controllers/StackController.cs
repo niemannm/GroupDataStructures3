@@ -25,9 +25,8 @@ namespace GroupDataStructures.Controllers
 
         }
 
-        public displayStack()
+        public ActionResult displayStack()
         {
-
             return View();
         } 
 
