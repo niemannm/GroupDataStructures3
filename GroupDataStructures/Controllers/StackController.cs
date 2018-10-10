@@ -21,11 +21,9 @@ namespace GroupDataStructures.Controllers
         //method for adding to stack
         public ActionResult addToStack()
         {
-            ++iStackCount;
-            myStack.Push("New Entry " + iStackCount);
             myStack.Push("New Entry " + (myStack.Count + 1) + " ");
 
-            return View();
+            return View("Index");
         }
 
         //method for adding huge list of 2000 items to stack
@@ -35,21 +33,17 @@ namespace GroupDataStructures.Controllers
 
             for (iStackCount = 1; iStackCount < 2001; iStackCount++)
             {
-<<<<<<< HEAD
-                myStack.Push("New Entry " + iStackCount + " \n");
-=======
-                myStack.Push("New Entry " + iStackCount);
->>>>>>> a630cb238fd8f4ca45033af93384fa72b3cd0f10
                 myStack.Push("New Entry " + iStackCount + " ");
+
             }
 
-            return View();
+            return View("Index");
         }
 
         //method to display the stack for the user to see. ***use action result???
         public ActionResult displayStack()
         {
-            return View("Stack");
+            return View("Index");
         } 
 
         //method to delete an item from the stack
@@ -57,7 +51,7 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Pop();
 
-            return View();
+            return View("Index");
 
         }
 
@@ -73,13 +67,13 @@ namespace GroupDataStructures.Controllers
         {
 
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult returnToMenu()
         {
 
-            return View();
+            return View("Index");
         }
 
     }
