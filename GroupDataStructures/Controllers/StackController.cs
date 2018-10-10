@@ -23,6 +23,7 @@ namespace GroupDataStructures.Controllers
         {
             ++iStackCount;
             myStack.Push("New Entry " + iStackCount);
+            myStack.Push("New Entry " + (myStack.Count + 1) + " ");
 
             return View();
         }
@@ -32,13 +33,14 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Clear();
 
-            for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
+            for (iStackCount = 1; iStackCount < 2001; iStackCount++)
             {
 <<<<<<< HEAD
                 myStack.Push("New Entry " + iStackCount + " \n");
 =======
                 myStack.Push("New Entry " + iStackCount);
 >>>>>>> a630cb238fd8f4ca45033af93384fa72b3cd0f10
+                myStack.Push("New Entry " + iStackCount + " ");
             }
 
             return View();
@@ -64,7 +66,7 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Clear();
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult searchStack()
