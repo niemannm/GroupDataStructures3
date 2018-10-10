@@ -22,7 +22,7 @@ namespace GroupDataStructures.Controllers
         public ActionResult addToStack()
         {
             ++iStackCount;
-            myStack.Push("New Entry " + iStackCount + " ");
+            myStack.Push("New Entry " + iStackCount + " n\");
 
             return View("Index");
         }
@@ -34,7 +34,7 @@ namespace GroupDataStructures.Controllers
 
             for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
             {
-                myStack.Push("New Entry " + iStackCount + " ");
+                myStack.Push("New Entry " + iStackCount + " \n");
             }
 
             return View("Index");
