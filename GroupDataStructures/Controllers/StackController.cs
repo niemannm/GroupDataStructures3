@@ -40,10 +40,6 @@ namespace GroupDataStructures.Controllers
             return View("Index");
         }
 
-<<<<<<< HEAD
-=======
-        //method to display the stack for the user to see. ***use action result???
->>>>>>> master
         public ActionResult displayStack()
         {
             foreach (string s in myStack)
