@@ -16,12 +16,11 @@ namespace GroupDataStructures.Controllers
 
         //declare vars
         static Stack<string> myStack = new Stack<string>();
-        static int iStackCount = 0;
+        int iStackCount = 0;
 
         //method for adding to stack
         public ActionResult addToStack()
         {
-            
             myStack.Push("New Entry " + (myStack.Count + 1) + " ");
 
             return View("Index");
@@ -35,6 +34,7 @@ namespace GroupDataStructures.Controllers
             for (iStackCount = 1; iStackCount < 2001; iStackCount++)
             {
                 myStack.Push("New Entry " + iStackCount + " ");
+
             }
 
             return View("Index");
@@ -43,10 +43,6 @@ namespace GroupDataStructures.Controllers
         //method to display the stack for the user to see. ***use action result???
         public ActionResult displayStack()
         {
-            foreach (string s in myStack)
-            {
-                ViewBag.displayStack += s;
-            }
             return View("Index");
         } 
 
@@ -55,7 +51,7 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Pop();
 
-            return View();
+            return View("Index");
 
         }
 
@@ -71,13 +67,13 @@ namespace GroupDataStructures.Controllers
         {
 
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult returnToMenu()
         {
 
-            return View();
+            return View("Index");
         }
 
     }
