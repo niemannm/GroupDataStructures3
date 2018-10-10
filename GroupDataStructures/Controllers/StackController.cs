@@ -14,15 +14,25 @@ namespace GroupDataStructures.Controllers
             return View();
         }
 
+        //declare vars
+        Stack<string> myStack = new Stack<string>();
+        int iStackCount = 0;
+
+        //method for adding to stack
         public void addToStack()
         {
-
-           
+            ++iStackCount;
+            myStack.Push("New Entry " + iStackCount);  
         }
 
+        //method for adding huge list of 2000 items to stack
         public void addListToStack()
         {
-
+                myStack.Clear();
+                for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
+                {
+                    myStack.Push("New Entry " + iStackCount);
+                }
         }
 
         public displayStack()
