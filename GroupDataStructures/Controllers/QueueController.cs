@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace GroupDataStructures.Controllers
 {
-    public class HomeController : Controller
+    public class QueueController : Controller
     {
-        // GET: Home
+        // GET: Queue
         public ActionResult Index()
         {
-
             return View();
         }
     }

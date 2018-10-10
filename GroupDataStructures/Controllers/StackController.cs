@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace GroupDataStructures.Controllers
 {
-    public class HomeController : Controller
+    public class StackController : Controller
     {
-        // GET: Home
+        // GET: Stack
         public ActionResult Index()
         {
-
             return View();
         }
     }
