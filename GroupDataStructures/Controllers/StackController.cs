@@ -15,54 +15,65 @@ namespace GroupDataStructures.Controllers
         }
 
         //declare vars
-        Stack<string> myStack = new Stack<string>();
+        static Stack<string> myStack = new Stack<string>();
         int iStackCount = 0;
 
         //method for adding to stack
-        public void addToStack()
+        public ActionResult addToStack()
         {
             ++iStackCount;
-            myStack.Push("New Entry " + iStackCount);  
+            myStack.Push("New Entry " + iStackCount);
+
+            return View();
         }
 
         //method for adding huge list of 2000 items to stack
-        public void addListToStack()
+        public ActionResult addListToStack()
         {
-                myStack.Clear();
-                for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
-                {
-                    myStack.Push("New Entry " + iStackCount);
-                }
+            myStack.Clear();
+
+            for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
+            {
+                myStack.Push("New Entry " + iStackCount);
+            }
+
+            return View();
         }
 
-        public displayStack()
+        //method to display the stack for the user to see. ***use action result???
+        public ActionResult displayStack()
+        {
+            return View("Stack");
+        } 
+
+        //method to delete an item from the stack
+        public ActionResult deleteFromStack()
+        {
+            myStack.Pop();
+
+            return View();
+
+        }
+
+        //method to clear the stack
+        public ActionResult clearStack()
+        {
+            myStack.Clear();
+
+            return View();
+        }
+
+        public ActionResult searchStack()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult returnToMenu()
         {
 
             return View();
-        } 
-
-        public void deleteFromStack()
-        {
-
-
-        }
-
-        public void clearStack()
-        {
-
-
-        }
-
-        public void searchStack()
-        {
-
-
-        }
-
-        public void returnToMenu()
-        {
-
-
         }
 
     }
