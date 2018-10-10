@@ -25,11 +25,6 @@ namespace GroupDataStructures.Controllers
 
         }
 
-        public displayStack()
-        {
-
-            return View();
-        } 
 
         public void deleteFromStack()
         {
