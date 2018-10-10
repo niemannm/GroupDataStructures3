@@ -21,8 +21,8 @@ namespace GroupDataStructures.Controllers
         //method for adding to stack
         public ActionResult addToStack()
         {
-            ++iStackCount;
-            myStack.Push("New Entry " + iStackCount + " n\");
+            
+            myStack.Push("New Entry " + (myStack.Count + 1) + " ");
 
             return View("Index");
         }
@@ -32,9 +32,9 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Clear();
 
-            for (iStackCount = 0; iStackCount < 2001; ++iStackCount)
+            for (iStackCount = 1; iStackCount < 2001; iStackCount++)
             {
-                myStack.Push("New Entry " + iStackCount + " \n");
+                myStack.Push("New Entry " + iStackCount + " ");
             }
 
             return View("Index");
@@ -64,7 +64,7 @@ namespace GroupDataStructures.Controllers
         {
             myStack.Clear();
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult searchStack()
