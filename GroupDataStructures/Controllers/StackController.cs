@@ -13,5 +13,47 @@ namespace GroupDataStructures.Controllers
         {
             return View();
         }
+
+        public void addToStack()
+        {
+
+           
+        }
+
+        public void addListToStack()
+        {
+
+        }
+
+        public displayStack()
+        {
+
+            return View();
+        } 
+
+        public void deleteFromStack()
+        {
+
+
+        }
+
+        public void clearStack()
+        {
+
+
+        }
+
+        public void searchStack()
+        {
+
+
+        }
+
+        public void returnToMenu()
+        {
+
+
+        }
+
     }
 }
