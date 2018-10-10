@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GroupDataStructures",
+    "\\GroupDataStructures\\Controllers",
+    "\\GroupDataStructures\\Views",
+    "\\GroupDataStructures\\Views\\Dictionary",
+    "\\GroupDataStructures\\Views\\Home",
+    "\\GroupDataStructures\\Views\\Queue"
+  ],
+  "SelectedNode": "\\GroupDataStructures\\Views\\Queue\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}
